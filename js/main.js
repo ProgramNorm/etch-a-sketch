@@ -1,8 +1,5 @@
 $(document).ready(function(){
 	createGrid();
-	$('.grid').hover(function(){
-		$(this).css('background-color', 'black');
-	});
 	$('.clear').on('click', function() {
 		$('.container').empty();
 		createGrid();
@@ -10,7 +7,7 @@ $(document).ready(function(){
 });
 
 function createGrid(ui) {       
-	var ui = prompt('Choose the size of the grid (1-100 for best performance)');
+	var ui = prompt('Choose the size of the grid (4-100 only)');
 	if (ui < 4 || typeof(parseInt(ui)) !== 'number'){
 		ui = 4;
 		alert('Default minimum of 4 was chosen');
@@ -22,5 +19,9 @@ function createGrid(ui) {
 	for(var i = 0; i < ui*ui; i++){
 		$('.container').append('<div class="grid" style="height:'+100/ui+'%; width:'+100/ui+'%"></div>')
 	}
+
+	$('.grid').hover(function(){
+		$(this).css('background-color', 'black');
+	});
 }
 
