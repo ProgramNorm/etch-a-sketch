@@ -1,11 +1,19 @@
+.clear {
+	background-color:  darkred;
+	display: flex;
+	font-size: 20px;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 75px;
+}
+
 .container {
 	margin: auto;
 	background-color: white;
 	border: solid;
 	border-color: black;
-	position: relative;
-	top: 40%;
-	transform: translateY(-50%);
 	width: 400px;
 	height: 400px;
 }
@@ -15,13 +23,46 @@
 	float: left;
 }
 
+.knob {
+	background-color: tan;
+	border: 0px solid;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100px;
+}
+
+.knob-inner {
+	border: 2px solid;
+	border-radius: 50px;
+	border-color: black;
+	height: 85px;
+	width: 85px;
+}
+
 .outter {
+	display: flex;
+	flex-direction: column;
 	background-color: red;
 	border-radius: 5%;
 	margin: auto;
-	position: relative;
 	height: 600px;
 	width: 600px;
+}
+
+.outter-bottom {
+	display: flex;
+	justify-content: space-around;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .title {
